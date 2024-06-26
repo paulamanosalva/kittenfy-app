@@ -10,7 +10,8 @@ h1, h2, h3, h4, h5, h6, p, li, button {
 
 body {
   font-family: 'Gloria Hallelujah', cursive;
-  background-color: #fff;
+  background-image: url('../public/images/kittens.png');
+  background-repeat: no-repeat;
   color: #000;
   margin: 0;
   padding: 0;
@@ -59,30 +60,6 @@ body {
 
 body:has(.artists-list) {
   align-items: flex-start;
-}
-
-.kitten {
-  width: 160px;
-  height: auto;
-  z-index: -1;
-  position: absolute;
-}
-
-.kitten-1 {
-  transform: rotate(-60deg);
-  right: 10px;
-  top: -40px;
-}
-
-.kitten-2 {
-  bottom: 0;
-  left: 0;
-}
-
-.kitten-3 {
-  bottom: 0px;
-  right: -50px;
-  transform: rotate(-35deg)
 }
 
 

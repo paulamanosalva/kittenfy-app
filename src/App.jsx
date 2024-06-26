@@ -2,9 +2,6 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { authEndpoint, clientId, redirectUri, scopes } from './spotify-config';
 import hash from './hash';
-import kitten1 from '../public/images/kitten1.png';
-import kitten2 from '../public/images/kitten2.png';
-import kitten3 from '../public/images/kitten3.png';
 import './index.css'; 
 
 const App = () => {
@@ -57,9 +54,6 @@ const App = () => {
 
   return (
     <div className="main-container">
-      <img className='kitten kitten-1' src={kitten1} alt="Kitten 1" />
-      <img className='kitten kitten-2' src={kitten2} alt="Kitten 2" />
-      <img className='kitten kitten-3' src={kitten3} alt="Kitten 3" />
         {!token ? (
           <button className='login-button' onClick={handleLogin}>Login to Spotify</button>
         ) : (
