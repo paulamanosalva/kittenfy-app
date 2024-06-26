@@ -12,6 +12,7 @@ body {
   font-family: 'Gloria Hallelujah', cursive;
   background-image: url('../public/images/kittens.png');
   background-repeat: no-repeat;
+  background-size: cover;
   color: #000;
   margin: 0;
   padding: 0;
@@ -20,6 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
 }
 
 
