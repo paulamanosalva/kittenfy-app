@@ -13,7 +13,6 @@ const port = process.env.PORT || 3001;
 app.use(bodyParser.json());
 app.use(cors());
 
-// Serve the static files from the React app
 app.use(express.static(path.join(__dirname, '..', 'build')));
 
 app.post('/api/token', async (req, res) => {
@@ -41,7 +40,6 @@ app.post('/api/token', async (req, res) => {
   }
 });
 
-// Handles any requests that don't match the ones above
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
 });

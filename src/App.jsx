@@ -2,20 +2,22 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { authEndpoint, clientId, redirectUri, scopes } from './spotify-config';
 import hash from './hash';
+import kitten1 from '../public/images/kitten1.png';
+import kitten2 from '../public/images/kitten2.png';
+import kitten3 from '../public/images/kitten3.png';
+import './index.css'; 
 
 const App = () => {
   const [token, setToken] = useState('');
   const [topArtists, setTopArtists] = useState([]);
 
   useEffect(() => {
-    // Check if we have a token in the URL hash
     let _token = hash.access_token;
     if (_token) {
       setToken(_token);
       window.location.hash = '';
       getTopArtists(_token);
     } else {
-      // Check if we have a code in the URL search params
       const code = new URLSearchParams(window.location.search).get('code');
       if (code) {
         fetchToken(code);
@@ -41,7 +43,7 @@ const App = () => {
           Authorization: `Bearer ${token}`
         }
       });
-      setTopArtists(data.items);
+      setTopArtists(data.items.slice(0, 12));
     } catch (error) {
       console.error('Error fetching top artists', error);
     }
@@ -54,21 +56,22 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="main-container">
+      <img className='kitten kitten-1' src={kitten1} alt="Kitten 1" />
+      <img className='kitten kitten-2' src={kitten2} alt="Kitten 2" />
+      <img className='kitten kitten-3' src={kitten3} alt="Kitten 3" />
         {!token ? (
-          <button onClick={handleLogin}>Login to Spotify</button>
+          <button className='login-button' onClick={handleLogin}>Login to Spotify</button>
         ) : (
           <div>
-            <h1>Top Artists</h1>
-            <ul>
+            <h1 className='page-title'>Top Artists</h1>
+            <ul className="artists-list">
               {topArtists.map(artist => (
-                <li key={artist.id}>{artist.name}</li>
+                <li className='artist-item' key={artist.id}>{artist.name}</li>
               ))}
             </ul>
           </div>
         )}
-      </header>
     </div>
   );
 };

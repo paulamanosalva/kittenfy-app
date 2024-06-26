@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+body {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, button {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+body {
+  font-family: 'Gloria Hallelujah', cursive;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.login-button {
+  font-family: 'Gloria Hallelujah', cursive;
+  background-color: #ffcccb;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.login-button:hover {
+  background-color: #ff9999;
+}
+
+.page-title {
+  margin-top: 3em;
+  font-size: 2.5em;
+  z-index: 2;
+  margin-bottom: 0;
+}
+
+.artist-item {
+  width: 80%;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.main-container {
+  height: 100%;
+  z-index: 1;
+  position: realtive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body:has(.artists-list) {
+  align-items: flex-start;
+}
+
+.kitten {
+  width: 160px;
+  height: auto;
+  z-index: -1;
+  position: absolute;
+}
+
+.kitten-1 {
+  transform: rotate(-60deg);
+  right: 10px;
+  top: -40px;
+}
+
+.kitten-2 {
+  bottom: 0;
+  left: 0;
+}
+
+.kitten-3 {
+  bottom: 0px;
+  right: -50px;
+  transform: rotate(-35deg)
+}
+
+
