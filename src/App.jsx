@@ -28,7 +28,7 @@ const App = () => {
 
   const fetchToken = async (code) => {
     try {
-      const response = await axios.post('http://localhost:3001/api/token', { code });
+      const response = await axios.post('https://kittenfy.netlify.app/api/token', { code });
       setToken(response.data.access_token);
       getTopArtists(response.data.access_token);
     } catch (error) {
