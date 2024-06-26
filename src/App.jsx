@@ -28,7 +28,7 @@ const App = () => {
 
   const fetchToken = async (code) => {
     try {
-      const response = await axios.post('https://kittenfy.netlify.app/api/token', { code });
+      const response = await axios.post('/.netlify/functions/token', { code });
       setToken(response.data.access_token);
       getTopArtists(response.data.access_token);
     } catch (error) {
@@ -59,7 +59,7 @@ const App = () => {
     <div className="main-container">
       <img className='kitten kitten-1' src={kitten1} alt="Kitten 1" />
       <img className='kitten kitten-2' src={kitten2} alt="Kitten 2" />
-      <img className='kitten kitten-3' src={kitten3} alt="Kitten 3" />
+      <img className='kitten-3' src={kitten3} alt="Kitten 3" />
         {!token ? (
           <button className='login-button' onClick={handleLogin}>Login to Spotify</button>
         ) : (
