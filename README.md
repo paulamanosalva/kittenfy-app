@@ -10,8 +10,6 @@ This app is registered in the Spotify's website for developers, since it is mand
 
 ![alt text](image.png)
 
----
-
 ![alt text](image-1.png)
 
 ## React + Vite
