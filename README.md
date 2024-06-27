@@ -8,6 +8,7 @@ This app is registered in the Spotify's website for developers, since it is mand
 
 ## Screenshots
 
+![alt text](image-2.png)
 ![alt text](image.png)
 ![alt text](image-1.png)
 
