@@ -1,8 +1,16 @@
-# React + Vite
+# Kittenfy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The page retrieves data from Spotify and displays the user's top artists. The name is because of the background image, which is a doodle off my black cat.
 
-Currently, two official plugins are available:
+Implementation is very simple: Login --> get the top artists --> display the data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This app is registered in the Spotify's website for developers, since it is mandatory to be able to use the authentification process and get the data.
+
+## Screenshots
+
+![alt text](image.png)
+![alt text](image-1.png)
+
+## React + Vite
+
+I used the Vite template for React which provides a minimal setup to get React working really fast.
