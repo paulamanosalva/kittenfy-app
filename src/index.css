@@ -63,4 +63,11 @@ body:has(.artists-list) {
   align-items: flex-start;
 }
 
+@media (min-width: 768px) {
+  body {
+    background-size: auto;
+    background-position: center;
+  }
+}
+
 
