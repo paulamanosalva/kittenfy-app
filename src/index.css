@@ -68,6 +68,10 @@ body:has(.artists-list) {
     background-size: auto;
     background-position: center;
   }
+
+  .page-title {
+    margin-top: 4em;
+  }
 }
 
 
